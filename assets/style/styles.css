@@ -122,7 +122,11 @@ body {
 }
 
 .proj-title { font-weight: bold; color: #ffe3ff; }
-.proj-meta { font-size: 12px; opacity: 0.8; }
+.proj-meta {
+  color: #ffdbff !important;
+  opacity: 0.9 !important;
+}
+
 
 .tech span {
   background: #550067;
@@ -189,4 +193,21 @@ footer {
 @keyframes fall {
   from { transform: translateY(-120%); }
   to { transform: translateY(120%); }
+}
+.card,
+.card p,
+.card div,
+.card span {
+  color: #fce8ff !important;
+}
+aside p,
+aside a,
+aside strong {
+  color: #ffeaff !important;
+}
+/* Ensure Press Start font stays readable */
+.hero-title,
+.hero-sub,
+.section-head {
+  color: #ffeaff !important;
 }
