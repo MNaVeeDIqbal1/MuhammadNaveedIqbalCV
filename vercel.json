@@ -1,5 +1,5 @@
 {
   "rewrites": [
-    { "source": "/(.*)", "destination": "/cv-game.html" }
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
