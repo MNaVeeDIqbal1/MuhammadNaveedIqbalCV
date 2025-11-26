@@ -30,7 +30,7 @@ for (let i = 0; i < 25; i++) { // dreamy effect
   const left = Math.random() * 100 + "%";
 
   const duration = Math.random() * 35 + 25 + "s";           // slow falling
-  const delay = Math.random() * 5 + "s";                    // staggered start
+  const delay = -(Math.random() * 60) + "s";
   const startY = Math.random() * 100;                       // random starting height
 
   b.style.setProperty("--size", size);
