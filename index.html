@@ -21,21 +21,30 @@
     <div class="falling-blocks">
   <!-- Generated blocks -->
   <script>
-    for (let i = 0; i < 18; i++) {
-      const b = document.createElement("div");
-      b.className = "pixel-block";
+for (let i = 0; i < 25; i++) { // dreamy effect
 
-      const size = Math.floor(Math.random() * 30) + 10 + "px";
-      const left = Math.random() * 100 + "%";
-      const duration = Math.random() * 8 + 6 + "s";
+  const b = document.createElement("div");
+  b.className = "pixel-block";
 
-      b.style.setProperty("--size", size);
-      b.style.left = left;
-      b.style.setProperty("--duration", duration);
+  const size = Math.floor(Math.random() * 40) + 20 + "px";  // bigger blocks
+  const left = Math.random() * 100 + "%";
 
-      document.currentScript.parentElement.appendChild(b);
-    }
-  </script>
+  const duration = Math.random() * 35 + 25 + "s";           // slow falling
+  const delay = Math.random() * 5 + "s";                    // staggered start
+  const startY = Math.random() * 100;                       // random starting height
+
+  b.style.setProperty("--size", size);
+  b.style.left = left;
+  b.style.setProperty("--duration", duration);
+  b.style.animationDelay = delay;
+  b.style.setProperty("--start-y", startY + "vh");          // <-- important
+
+  b.style.opacity = 0.4 + Math.random() * 0.6;             // dreamy variation
+
+  document.currentScript.parentElement.appendChild(b);
+}
+</script>
+
 </div>
   <!-- Magical Sparkles Background -->
   <div class="sparkles"></div>
@@ -65,6 +74,7 @@
           <h3 class="section-head">Core Skills</h3>
           <div class="skills">
             <div class="pixel-tag">Unity 2D/3D</div>
+            <div class="pixel-tag">3D Modeling</div>
             <div class="pixel-tag">C# Scripting</div>
             <div class="pixel-tag">Pixel UI/UX</div>
             <div class="pixel-tag">Animator</div>
