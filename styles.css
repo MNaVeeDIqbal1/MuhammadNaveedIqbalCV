@@ -1,0 +1,125 @@
+/* READABILITY OVERRIDES */
+:root {
+  --pixel-font: 'Press Start 2P', cursive;
+  --clean-font: 'Inter', sans-serif;
+  --accent-font: 'Pixelify Sans', cursive;
+}
+
+body {
+  font-family: var(--clean-font); /* Makes descriptions readable */
+  background-color: #121212;
+  color: #eeeeee;
+}
+
+.hero-title, .section-head, .proj-title {
+  font-family: var(--pixel-font);
+}
+
+.hero-sub, .pixel-tag {
+  font-family: var(--accent-font);
+}
+
+.no-deco { text-decoration: none; }
+
+/* Rest of your existing CSS below... */
+.pixel-border {
+  border: 4px solid #fff;
+  border-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='6' height='6' viewBox='0 0 6 6'%3E%3Cpath d='M0 2h2v2H0zM2 0h2v2H2zM4 2h2v2H4zM2 4h2v2H2z' fill='%23ffffff'/%3E%3C/svg%3E") 2;
+  background: rgba(30, 30, 30, 0.9);
+  padding: 1.5rem;
+}
+
+.project {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px dashed #444;
+  padding: 15px 0;
+}
+
+.tech span {
+  font-size: 0.8rem;
+  background: #00ff9d;
+  color: #000;
+  padding: 2px 6px;
+  border-radius: 3px;
+  margin-right: 5px;
+}
+
+/* Add your background animation CSS here */
+/* --- BACKGROUND ANIMATIONS --- */
+
+/* Falling Blocks Styling */
+.falling-blocks {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.pixel-block {
+  position: absolute;
+  width: var(--size);
+  height: var(--size);
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+  top: -50px;
+  animation: fall var(--duration) linear infinite;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(var(--start-y)) rotate(0deg);
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg);
+  }
+}
+
+/* Magical Sparkles Styling */
+.sparkles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  background: radial-gradient(circle at center, #1a1a2e 0%, #0f0f1a 100%);
+  overflow: hidden;
+}
+
+.sparkles::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(circle, #ffffff 1px, transparent 1px),
+    radial-gradient(circle, #ffffff 1px, transparent 1px);
+  background-size: 50px 50px;
+  background-position: 0 0, 25px 25px;
+  opacity: 0.1;
+  animation: shimmer 10s linear infinite;
+}
+
+@keyframes shimmer {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50px); }
+}
+
+/* --- FADE IN EFFECT FOR CARDS --- */
+.fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

@@ -3,95 +3,58 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Muhammad Naveed Iqbal — RPG Game Developer CV</title>
+  <title>Muhammad Naveed Iqbal — Unity Developer & 3D Artist</title>
 
-  <!-- Pixel Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Pixelify+Sans:wght@600&display=swap" rel="stylesheet">
-
-  <link
-  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-  rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Pixelify+Sans:wght@600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  
   <link rel="stylesheet" href="assets/style/styles.css" />
-  <!-- Bootstrap CSS -->
-
 </head>
 <body>
 
-    <div class="falling-blocks">
-  <!-- Generated blocks -->
-  <script>
-for (let i = 0; i < 25; i++) { // dreamy effect
-
-  const b = document.createElement("div");
-  b.className = "pixel-block";
-
-  const size = Math.floor(Math.random() * 40) + 20 + "px";  // bigger blocks
-  const left = Math.random() * 100 + "%";
-
-  const duration = Math.random() * 35 + 25 + "s";           // slow falling
-  const delay = -(Math.random() * 60) + "s";
-  const startY = Math.random() * 100;                       // random starting height
-
-  b.style.setProperty("--size", size);
-  b.style.left = left;
-  b.style.setProperty("--duration", duration);
-  b.style.animationDelay = delay;
-  b.style.setProperty("--start-y", startY + "vh");          // <-- important
-
-  b.style.opacity = 0.4 + Math.random() * 0.6;             // dreamy variation
-
-  document.currentScript.parentElement.appendChild(b);
-}
-</script>
-
-</div>
-  <!-- Magical Sparkles Background -->
+  <div class="falling-blocks" id="block-container"></div>
   <div class="sparkles"></div>
 
   <main class="container">
-
     <header class="hero">
       <img class="avatar-img" src="assets/images/Naveed.jpg" alt="Naveed" />
-
       <div class="hero-info">
         <h1 class="hero-title">Muhammad Naveed Iqbal</h1>
-        <p class="hero-sub">RPG • Pixel • Unity Game Developer</p>
+        <p class="hero-sub">Unity Developer • 3D Modeler • Technical Animator</p>
+        <div class="mt-2">
+          <a href="https://www.linkedin.com/in/m-naveed-iqbal-337b15255/" target="_blank" class="pixel-tag no-deco">LinkedIn</a>
+          <a href="https://github.com/MNaVeeDIqbal1" target="_blank" class="pixel-tag no-deco">GitHub</a>
+        </div>
       </div>
     </header>
 
     <div class="row g-3">
-
-      <!-- LEFT SECTION -->
       <section class="col-lg-8 col-md-12">
-
         <div class="card pixel-border fade-in">
           <h3 class="section-head">Professional Summary</h3>
-          <p>Indie-style game developer specializing in RPG mechanics, pixel-art UX, Unity gameplay systems, animation, and optimized mobile/PC builds. Passionate about magical interactions and immersive environments.</p>
+          <p>Unity Developer and 3D Artist with 1+ years of experience specializing in RPG mechanics, C# scripting, and technical animation. Currently in 8th semester of BSCS, merging technical logic with high-quality 3D art.</p>
         </div>
 
-        <div class="card pixel-border fade-in" style="margin-top:16px">
+        <div class="card pixel-border fade-in mt-3">
           <h3 class="section-head">Core Skills</h3>
           <div class="skills">
             <div class="pixel-tag">Unity 2D/3D</div>
-            <div class="pixel-tag">3D Modeling</div>
             <div class="pixel-tag">C# Scripting</div>
-            <div class="pixel-tag">Pixel UI/UX</div>
-            <div class="pixel-tag">Animator</div>
+            <div class="pixel-tag">3D Modeling (Blender)</div>
+            <div class="pixel-tag">Technical Animation</div>
             <div class="pixel-tag">AI Systems</div>
-            <div class="pixel-tag">Quest System</div>
-            <div class="pixel-tag">Mobile Builds</div>
-            <div class="pixel-tag">Blender Basics</div>
+            <div class="pixel-tag">Mobile Optimization</div>
           </div>
         </div>
 
-        <div class="card pixel-border fade-in" style="margin-top:16px">
+        <div class="card pixel-border fade-in mt-3">
           <h3 class="section-head">Projects</h3>
 
           <article class="project">
             <div>
-              <div class="proj-title">🏜️ Desert Rally — PC Racing Game</div>
-              <div class="proj-meta">Local multiplayer racing with desert laps and physics.</div>
+              <div class="proj-title">🏜️ Desert Rally — PC Racing</div>
+              <div class="proj-meta">Local multiplayer racing with custom physics and optimized desert laps.</div>
               <div class="tech"><span>Unity</span><span>C#</span><span>Physics</span></div>
             </div>
             <a class="pixel-btn" href="https://drive.google.com/file/d/19jCR7mxuaoaoJOvdK7Vxp1HHgeeDPgyE/view?usp=drive_link">▶</a>
@@ -99,36 +62,34 @@ for (let i = 0; i < 25; i++) { // dreamy effect
 
           <article class="project">
             <div>
-              <div class="proj-title">👻 Night Whispers — Mobile Horror</div>
-              <div class="proj-meta">5-stage horror focused on ambience & scenarios.</div>
-              <div class="tech"><span>Unity</span><span>Horror</span><span>Mobile</span></div>
-            </div>
-            <a class="pixel-btn" href="#">▶</a>
-          </article>
-
-          <article class="project">
-            <div>
-              <div class="proj-title">🎱 3D Snooker — PC</div>
-              <div class="proj-meta">Physics-driven 3D snooker mechanics.</div>
-              <div class="tech"><span>Unity</span><span>3D</span></div>
-            </div>
-            <a class="pixel-btn" href="#">WIP</a>
-          </article>
-
-          <article class="project">
-            <div>
               <div class="proj-title">🎒 Classroom Mischief — Game Jam</div>
-              <div class="proj-meta">Stealth + comedy game jam project.</div>
-              <div class="tech"><span>Unity</span><span>Game Jam</span></div>
+              <div class="proj-meta"><strong>Group Project:</strong> Stealth-comedy game created for GGJ. Led 3D asset pipeline and character logic.</div>
+              <div class="tech"><span>Unity</span><span>Stealth AI</span><span>Teamwork</span></div>
             </div>
             <a class="pixel-btn" href="https://youtu.be/hbeMYqzMdpU">▶</a>
           </article>
 
           <article class="project">
             <div>
-              <div class="proj-title">🪖 PSA Helmet — Animation</div>
-              <div class="proj-meta">Public safety animation project.</div>
-              <div class="tech"><span>Animation</span></div>
+              <div class="proj-title">👻 Night Whispers — Mobile Horror</div>
+              <div class="proj-meta">5-stage atmospheric horror focused on mobile lighting and performance.</div>
+              <div class="tech"><span>Unity</span><span>Mobile</span><span>Horror</span></div>
+            </div>
+          </article>
+
+          <article class="project">
+            <div>
+              <div class="proj-title">🎱 3D Snooker — PC</div>
+              <div class="proj-meta">Physics-driven 3D snooker mechanics. (Work in Progress)</div>
+              <div class="tech"><span>Unity 3D</span><span>Physics</span></div>
+            </div>
+          </article>
+
+          <article class="project">
+            <div>
+              <div class="proj-title">🪖 PSA Helmet — Technical Animation</div>
+              <div class="proj-meta">Public safety animation project highlighting rigging and visualization.</div>
+              <div class="tech"><span>Animation</span><span>Blender</span></div>
             </div>
             <a class="pixel-btn" href="https://drive.google.com/file/d/1CpYgrT-eYfVNq9z1-rRENu6yXV97GDDr/view?usp=drive_link">▶</a>
           </article>
@@ -136,41 +97,36 @@ for (let i = 0; i < 25; i++) { // dreamy effect
           <article class="project">
             <div>
               <div class="proj-title">👁️ Eye Size Comparison</div>
-              <div class="proj-meta">Client animation short.</div>
-              <div class="tech"><span>Animation</span></div>
+              <div class="proj-meta">Client animation short focusing on precision modeling.</div>
+              <div class="tech"><span>Animation</span><span>3D Art</span></div>
             </div>
             <a class="pixel-btn" href="https://drive.google.com/file/d/1sdfNNxk8EsR4-2VrFrtwdATaJfesfNrk/view?usp=drive_link">▶</a>
           </article>
-
         </div>
-
       </section>
 
-      <!-- RIGHT PANEL -->
       <aside class="col-lg-4 col-md-12">
-
         <div class="card pixel-border fade-in">
           <h3 class="section-head">Contact</h3>
           <p><strong>Email:</strong> naveed.iqbal2004@gmail.com</p>
           <p><strong>Phone:</strong> +92 321-4608975</p>
-          <p><strong>GitHub:</strong> <a href="https://github.com/MNaVeeDIqbal1">MNaVeeDIqbal1</a></p>
           <p><strong>Location:</strong> Pakistan</p>
 
-          <h3 class="section-head" style="margin-top:12px">Education</h3>
-          <p>BS Computer Science</p>
+          <h3 class="section-head mt-3">Education</h3>
+          <p><strong>BS Computer Science</strong><br>
+          Semester: 8th (Final)<br>
+          <strong>CGPA: 3.25</strong></p>
 
-          <h3 class="section-head" style="margin-top:12px">Languages</h3>
+          <h3 class="section-head mt-3">Languages</h3>
           <p>English, Urdu</p>
         </div>
-
       </aside>
-
     </div>
 
-    <footer class="fade-in">© 2025</footer>
-
+    <footer class="fade-in">© 2026 | Muhammad Naveed Iqbal</footer>
   </main>
-  <!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/scripts.js"></script>
 </body>
 </html>
