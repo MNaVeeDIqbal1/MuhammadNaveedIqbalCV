@@ -1,224 +1,132 @@
-/* ============ GLOBAL THEME ============ */
+/* =========================================
+   1. CORE FONTS & READABILITY
+   ========================================= */
+:root {
+  --heading-font: 'Press Start 2P', cursive;
+  --details-font: 'Pixelify Sans', cursive;
+  --accent-color: #00ff9d; /* Matrix/Retro Green */
+  --bg-dark: #0f0f1a;
+  --card-bg: rgba(25, 25, 35, 0.9);
+}
+
 body {
-  margin: 0;
-  padding: 0;
-  background: #120016;
-  color: #f0eaff;
-  font-family: 'Pixelify Sans', sans-serif;
-  overflow-x: hidden;
+  background-color: var(--bg-dark);
+  color: #eeeeee;
+  /* This ensures all general text is readable */
+  font-family: var(--details-font); 
+  font-size: 1.1rem;
+  line-height: 1.5;
 }
 
-/* Magical sparkles animation */
-.sparkles {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  background: radial-gradient(#ffffff22 2px, transparent 3px) repeat;
-  background-size: 6px 6px;
-  animation: sparkle 6s linear infinite;
-  opacity: 0.2;
+/* Headings: Keep them Pixelated but sized appropriately */
+h1, .hero-title {
+  font-family: var(--heading-font);
+  font-size: 1.8rem;
+  color: #ffffff;
+  text-shadow: 3px 3px #ff0055; /* Retro glitch effect */
 }
 
-@keyframes sparkle {
-  0% {transform: translate(0,0);}
-  100% {transform: translate(-20px,-20px);}
+h3, .section-head {
+  font-family: var(--heading-font);
+  font-size: 1rem;
+  color: var(--accent-color);
+  margin-bottom: 20px;
+  text-transform: uppercase;
 }
 
-/* Container */
-.container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 40px 20px;
+.proj-title {
+  font-family: var(--heading-font);
+  font-size: 0.8rem; /* Small for readability */
+  color: #fff;
 }
 
-/* Hero Section */
-.hero {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  margin-bottom: 40px;
+/* Details: Force readability on descriptions and contact info */
+p, .proj-meta, aside p, .hero-sub {
+  font-family: var(--details-font) !important;
+  font-weight: 500;
+  letter-spacing: 0.5px;
 }
 
-.avatar-img {
-  width: 110px;
-  height: 110px;
-  border-radius: 8px;
-  border: 4px solid #ff89ff;
-  box-shadow: 0 0 16px #ff5cff;
+strong {
+  color: var(--accent-color);
+  font-weight: 700;
 }
 
-.hero-title {
-  font-family: "Press Start 2P";
-  font-size: 18px;
-  color: #ffd9ff;
-  text-shadow: 0 0 8px #ff63f8;
-}
-
-.hero-sub {
-  margin-top: 6px;
-  font-size: 14px;
-  opacity: 0.8;
-}
-
-/* Grid Layout */
-.grid {
-  display: grid;
-  grid-template-columns: 3fr 1.4fr;
-  gap: 20px;
-}
-
-/* Pixel RPG Card */
+/* =========================================
+   2. PIXEL UI COMPONENTS
+   ========================================= */
 .pixel-border {
-  border: 4px solid #ff9aff;
-  border-radius: 8px;
-  box-shadow: 0 0 16px #ff66ff;
-}
-
-.card {
-  padding: 18px;
-  background: #1c0022;
-}
-
-/* Sections */
-.section-head {
-  font-family: "Press Start 2P";
-  font-size: 14px;
-  color: #ffe6ff;
-  margin-bottom: 10px;
-}
-
-/* Skills */
-.skills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+  border: 4px solid #fff;
+  border-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='6' height='6' viewBox='0 0 6 6'%3E%3Cpath d='M0 2h2v2H0zM2 0h2v2H2zM4 2h2v2H4zM2 4h2v2H2z' fill='%23ffffff'/%3E%3C/svg%3E") 2;
+  background: var(--card-bg);
+  padding: 20px;
+  margin-bottom: 20px;
 }
 
 .pixel-tag {
-  background: #390040;
-  padding: 6px 10px;
-  border-radius: 4px;
-  border: 2px solid #ff9aff;
-  font-size: 13px;
+  display: inline-block;
+  background: #333;
+  color: var(--accent-color);
+  padding: 5px 10px;
+  margin: 4px;
+  border: 2px solid var(--accent-color);
+  font-size: 0.9rem;
 }
-
-/* Project Entries */
-.project {
-  background: #25002d;
-  padding: 14px;
-  margin: 12px 0;
-  border-radius: 6px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border: 2px solid #ff71ff;
-  transition: 0.2s;
-}
-
-.project:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 0 12px #ff47ff;
-}
-
-.proj-title { font-weight: bold; color: #ffe3ff; }
-.proj-meta {
-  color: #ffdbff !important;
-  opacity: 0.9 !important;
-}
-
 
 .tech span {
-  background: #550067;
-  padding: 4px 6px;
-  border-radius: 3px;
-  margin-right: 4px;
-  font-size: 11px;
+  background: var(--accent-color);
+  color: #000;
+  padding: 2px 8px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  margin-right: 5px;
+  border-radius: 2px;
 }
 
-/* RPG button */
-.pixel-btn {
-  padding: 6px 14px;
-  border: 2px solid #ff9aff;
-  color: #ffd8ff;
-  background: #3a003f;
-  text-decoration: none;
-  font-family: "Press Start 2P";
-  font-size: 10px;
-  transition: 0.2s;
-}
-
-.pixel-btn:hover {
-  background: #ff66ff;
-  color: #270027;
-  box-shadow: 0 0 10px #ff41ff;
-}
-
-/* Fade-in */
-.fade-in {
-  animation: fade 0.9s ease forwards;
-  opacity: 0;
-}
-
-@keyframes fade {
-  to { opacity: 1; }
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  margin-top: 40px;
-  opacity: 0.6;
-}
-/* ============ Falling Pixel Blocks (Tetris-like) ============ */
+/* =========================================
+   3. ANIMATIONS (Blocks & Sparkles)
+   ========================================= */
 .falling-blocks {
-  pointer-events: none;
   position: fixed;
-  inset: 0;
-  overflow: hidden;
+  top: 0; left: 0; width: 100%; height: 100%;
   z-index: -1;
+  pointer-events: none;
 }
+
 .pixel-block {
   position: absolute;
   width: var(--size);
   height: var(--size);
-  background: #ff75ff;
-  border: 2px solid #ffb3ff;
-  opacity: 0.7;
-  filter: drop-shadow(0 0 6px #ff44ff);
-
-  animation: dreamyFall var(--duration) linear infinite;
+  background-color: rgba(255, 255, 255, 0.05);
+  top: -50px;
+  animation: fall var(--duration) linear infinite;
 }
 
-@keyframes dreamyFall {
-  0% {
-    transform: translateX(0px) translateY(calc(var(--start-y) - 120vh));
-  }
-  50% {
-    transform: translateX(10px) translateY(calc(var(--start-y) + 50vh));
-    opacity: 0.7; /* Keep the block visible during the main fall */
-  }
-  100% {
-    /* Ensure the block is far off-screen AND completely transparent */
-    transform: translateX(0px) translateY(180vh); 
-    opacity: 0; 
-  }
+@keyframes fall {
+  0% { transform: translateY(var(--start-y)) rotate(0deg); }
+  100% { transform: translateY(110vh) rotate(360deg); }
 }
 
-.card,
-.card p,
-.card div,
-.card span {
-  color: #fce8ff !important;
+.sparkles {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  z-index: -2;
+  background: radial-gradient(circle at center, #1a1a2e 0%, #0f0f1a 100%);
 }
-aside p,
-aside a,
-aside strong {
-  color: #ffeaff !important;
+
+.fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+  opacity: 0;
 }
-/* Ensure Press Start font stays readable */
-.hero-title,
-.hero-sub,
-.section-head {
-  color: #ffeaff !important;
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Contact sidebar spacing */
+aside p {
+  border-left: 3px solid var(--accent-color);
+  padding-left: 12px;
+  margin-bottom: 15px;
 }
