@@ -8,7 +8,19 @@
   --bg-dark: #0f0f1a;
   --card-bg: rgba(15, 15, 26, 0.95); /* Slightly darker for better contrast */
 }
-
+.project {
+  margin-bottom: 2rem; 
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.pixel-btn {
+  display: inline-block;
+  margin-top: 10px;
+  font-family: var(--heading-font);
+  font-size: 1.2rem;
+  color: var(--accent-color);
+  text-decoration: none;
+}
 body {
   background-color: var(--bg-dark);
   color: #ffffff; /* Forced pure white for visibility */
@@ -94,16 +106,22 @@ strong {
   text-decoration: none;
 }
 
+.tech {
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
 .tech span {
   background: var(--accent-color);
   color: #000;
-  padding: 2px 8px;
-  font-size: 0.75rem;
-  font-weight: bold;
-  margin-right: 5px;
-  border-radius: 2px;
+  padding: 4px 10px;
+  font-family: var(--details-font);
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
 }
-
 /* =========================================
    3. ANIMATIONS & LAYOUT
    ========================================= */
@@ -150,4 +168,10 @@ aside p {
   border-left: 3px solid var(--accent-color);
   padding-left: 15px;
   margin-bottom: 20px;
+}
+
+aside .card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Adds space between Contact, Education, and Languages */
 }
